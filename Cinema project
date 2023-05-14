@@ -1,0 +1,61 @@
+R_seat=20 #available recliner seats
+N_seat=50 #available normal seats
+
+while True :
+
+    print ("-"*80)
+    print ("WELCOME TO FUN CINEMAS PANIPAT")
+    print ("Movie !! THE KERALA STORY")
+    print ("-"*80)
+
+
+    name = input("Enter Customer Name : \n ")
+    seat = int(input ("How many seats do you want to book? \n "))
+    seat_type = input ("What type of seats do you want to have? (normal/recliner) \n ")
+
+    if seat_type == "recliner" or seat_type == "Recliner": 
+        if R_seat>seat: 
+            amount = seat*250
+            print ("_"*80)
+            print ("_"*80)
+            print("The amount of recliner seat is:\n ",amount)
+            print ("_"*80)
+            R_seat -=seat
+            print ("_"*80)
+            print ("Available recliner seats: \n",r_seat)
+            print ("_"*80)
+
+        if R_seat<seat : print ("Recliner seats is not available \n")
+        if R_seat ==0: print ("Recliner seats Bookings full \n")
+
+
+    if seat_type == "normal" or seat_type == "Normal": 
+        if N_seat>seat: 
+            amount = seat*250
+            print ("_"*80)
+            print ("_"*80)
+            print("Amount of Normal seat is :\n " ,amount)
+            print ("_"*80)
+            N_seat -=seat
+            print ("_"*80)
+            print ("Available normal seats: \n",n_seat)
+            print ("_"*80)
+
+        if N_seat<seat: print ("Normal seat is not available \n")
+        if N_seat ==0: print ("Normal seats Booking full \n")
+
+    print ("_"*80)
+    combo = input ("Do you want morning combo of Rs.160 ?  \n ")
+    if combo == "yes" :
+        amount+=160
+        print ("_"*80)
+        print ("_"*80)
+        print ("After adding combo total amount is : \n",amount)
+        print ("_"*80)
+        print ("_"*80)
+    else :
+        print ("_"*80)
+        print ("_"*80)
+        print ("Total amount is : /n",amount)
+        print ("_"*80)
+        print ("_"*80)
